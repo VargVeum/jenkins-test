@@ -8,6 +8,7 @@ module.exports = defineConfig({
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
+    video: false
   },
   e2e: {
       setupNodeEvents(on, config) {
