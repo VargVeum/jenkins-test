@@ -12,15 +12,15 @@ pipeline {
                 }
             }
         }
-        // stage('Install Cypress') {
-        //     steps {
-        //         dir('jenkins-test') {
-        //             sh """ 
-        //             npm install cypress --save-dev
-        //             """
-        //         }
-        //     }
-        // }
+        stage('Install Cypress') {
+            steps {
+                dir('jenkins-test') {
+                    sh """ 
+                    npm install cypress --save-dev
+                    """
+                }
+            }
+        }
         // stage('Run Cypress tests') {
         //     steps {
         //         sh """ 
