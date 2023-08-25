@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 0,
-    "start": "2023-08-19T13:46:24.946Z",
-    "end": "2023-08-19T13:46:27.923Z",
-    "duration": 2977,
+    "start": "2023-08-25T05:04:14.247Z",
+    "end": "2023-08-25T05:04:17.515Z",
+    "duration": 3268,
     "testsRegistered": 1,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "233087ef-8f9a-44c7-a3e7-dc152f15145c",
+      "uuid": "016ee213-078d-49a9-9fdd-80c77504ae7a",
       "title": "",
       "fullFile": "cypress\\e2e\\spec.cy.js",
       "file": "cypress\\e2e\\spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9de549ae-63de-4d43-92c5-1e1cac402f57",
+          "uuid": "78d7a3dc-8fed-43a3-9ae4-ad24cd48dd13",
           "title": "template spec",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "passes",
               "fullTitle": "template spec passes",
               "timedOut": null,
-              "duration": 772,
+              "duration": 1037,
               "state": "passed",
               "speed": "fast",
               "pass": true,
@@ -47,20 +47,20 @@
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\spec.cy.js\"\n}",
               "code": "cy.visit('https://example.cypress.io');",
               "err": {},
-              "uuid": "b3cbfdb2-0cd8-4753-b36e-96b83c5b5e90",
-              "parentUUID": "9de549ae-63de-4d43-92c5-1e1cac402f57",
+              "uuid": "9768913f-e455-4e29-b931-e6d96eaeef4d",
+              "parentUUID": "78d7a3dc-8fed-43a3-9ae4-ad24cd48dd13",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "b3cbfdb2-0cd8-4753-b36e-96b83c5b5e90"
+            "9768913f-e455-4e29-b931-e6d96eaeef4d"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 772,
+          "duration": 1037,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -95,7 +95,7 @@
     "marge": {
       "options": {
         "charts": true,
-        "reportPageTitle": "QA Report 1692452774093",
+        "reportPageTitle": "QA Report 1692939843622",
         "embeddedScreenshots": true,
         "inlineAssets": true,
         "saveAllAttempts": false,

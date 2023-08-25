@@ -3,3 +3,4 @@ allure-report
 cypress/reports
 reports
 results
+mochawesome-report
