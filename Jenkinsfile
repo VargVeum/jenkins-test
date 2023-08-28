@@ -23,18 +23,18 @@ pipeline {
                 sh "npx cypress run --spec 'cypress/e2e/*.cy.js' --reporter mochawesome --headless --browser chrome"                 
             }
         }
-        post {
-            always {
-            script {
-                publishHTML (target : [allowMissing: false,
-                alwaysLinkToLastBuild: true,
-                keepAll: true,
-                reportDir: 'mochawesome-report',
-                reportFiles: 'mochawesome.html',
-                reportName: 'My Reports',
-                reportTitles: 'The Report'])
-            }
-        }   
-    }
+        // post {
+        //     always {
+        //     script {
+        //         publishHTML (target : [allowMissing: false,
+        //         alwaysLinkToLastBuild: true,
+        //         keepAll: true,
+        //         reportDir: 'mochawesome-report',
+        //         reportFiles: 'mochawesome.html',
+        //         reportName: 'My Reports',
+        //         reportTitles: 'The Report'])
+        //     }
+        // }   
+    // }
 }
 }
