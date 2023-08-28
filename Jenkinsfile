@@ -19,6 +19,7 @@ pipeline {
         }
         stage('Run Cypress tests') {
             steps {
+                cd jenkins-test
                 sh "npx cypress run --spec 'cypress/e2e/*.cy.js' --reporter mochawesome --headless --browser chrome"                 
             }
         }
@@ -35,4 +36,5 @@ pipeline {
             }
         }   
     }
+}
 }
