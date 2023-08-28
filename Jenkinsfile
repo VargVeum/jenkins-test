@@ -17,12 +17,12 @@ pipeline {
                 npm install cypress --save-dev'''              
             }
         }
-        // stage('Run Cypress tests') {
-        //     steps {
-        //         cd jenkins-test
-        //         sh "npx cypress run --spec 'cypress/e2e/*.cy.js' --reporter mochawesome --headless --browser chrome"                 
-        //     }
-        // }
+        stage('Run Cypress tests') {
+            steps {
+                sh '''cd jenkins-test
+                npx cypress run --spec 'cypress/e2e/*.cy.js' --reporter mochawesome --headless --browser chrome'''                            
+            }
+        }
         // post {
         //     always {
         //     script {
