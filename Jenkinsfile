@@ -11,6 +11,25 @@ pipeline {
                 echo 'Hello!'                
             }
         }
+        stage('Install requirements') { 	
+           steps { 
+               sh """ 
+
+               apt-get -y update && 
+
+               apt-get install -y python3 make gcc g++ curl postgresql-contrib libnotify-dev xauth xvfb 
+
+               apt-get install -y libgtk2.0-0 libgtk-3-0 libgbm-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 
+
+               apt-get install -y wget 
+
+               wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+
+               apt-get install -y ./google-chrome-stable_current_amd64.deb 
+
+               """ 
+           } 
+        } 
         stage('Install Cypress') {
             steps {
                 sh '''cd jenkins-test
