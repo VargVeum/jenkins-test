@@ -13,13 +13,13 @@ pipeline {
         }
         stage('Install Cypress') {
             steps {
-                sh '''cd jenkins-test
+                sh '''
                 npm install cypress --save-dev'''              
             }
         }
         stage('Run Cypress tests') {
             steps {
-                sh '''cd jenkins-test
+                sh '''
                 npx cypress run --spec 'cypress/e2e/*.cy.js' --reporter mochawesome --headless --browser chrome'''                            
             }
         }
