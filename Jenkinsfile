@@ -37,7 +37,7 @@ pipeline {
         //         sh '''
         //         npx cypress run --spec 'cypress/e2e/*.cy.js' --reporter mochawesome --headless --browser chrome'''                            
         //     }
-        }
+        // }
     //     post {
     //         always { 
     //             sh 'npx mochawesome-merge "Cypress/cypress/results/*.json" > Cypress/mochawesome.json' 
