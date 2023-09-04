@@ -12,8 +12,7 @@ pipeline {
             // on local Jenkins machine (assuming port 8080) see
             // http://localhost:8080/pipeline-syntax/globals#env
             echo "Running build ${env.BUILD_ID} on ${env.JENKINS_URL}"
-            sh 'npm ci'
-            sh 'npm run cy:verify'
+            sh 'npx cypress run --spec "cypress/e2e/*.cy.js" --reporter mochawesome --headless --browser chrome'
         }
     }
         // stage('Clone autotests repo') {
