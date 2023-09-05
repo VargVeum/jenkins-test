@@ -8,34 +8,31 @@ pipeline {
     stages {
         stage('build') {
         steps {
-            // there a few default environment variables on Jenkins
-            // on local Jenkins machine (assuming port 8080) see
-            // http://localhost:8080/pipeline-syntax/globals#env
             sh 'npm run cypress:info'
         }
     }
-        // stage('Clone autotests repo') {
-        //     steps {
-        //         git branch: 'main', url: 'https://github.com/VargVeum/jenkins-test.git'
-        //     }
-        // }
-        // stage('Print welcome message') {
-        //     steps {
-        //         echo 'Hello!'                
-        //     }
-        // }
+        stage('Clone autotests repo') {
+            steps {
+                git branch: 'main', url: 'https://github.com/VargVeum/jenkins-test.git'
+            }
+        }
+        stage('Print welcome message') {
+            steps {
+                echo 'Hello!'                
+            }
+        }
         // stage('Install Cypress') {
         //     steps {
         //         sh '''
         //         npm install cypress --save-dev'''              
         //     }
         // }
-        // stage('Run Cypress tests') {
-        //     steps {
-        //         sh '''
-        //         npx cypress run --spec 'cypress/e2e/*.cy.js' --reporter mochawesome --headless --browser chrome'''                            
-        //     }
-        // }
+        stage('Run Cypress tests') {
+            steps {
+                sh '''
+                npx cypress run --spec 'cypress/e2e/*.cy.js' --reporter mochawesome --headless --browser chrome'''                            
+            }
+        }
     //     post {
     //         always { 
     //             sh 'npx mochawesome-merge "Cypress/cypress/results/*.json" > Cypress/mochawesome.json' 
