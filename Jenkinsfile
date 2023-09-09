@@ -2,15 +2,10 @@ pipeline {
     agent {
         docker {
             image 'cypress/included:13.0.0'
-            args '-v .:/e2e -w /e2e'
+            args '-v .:/e2e -w /e2e -e HOME=/root'
         }
     }
-    stages {
-        stage('build') {
-        steps {
-            sh 'npm run cypress:info'
-        }
-    }
+    stages {        
         stage('Clone autotests repo') {
             steps {
                 git branch: 'main', url: 'https://github.com/VargVeum/jenkins-test.git'
@@ -46,5 +41,5 @@ pipeline {
     //             reportTitles: ''])                        
     //     }   
     // }
-}
+    }
 }
