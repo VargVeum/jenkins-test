@@ -8,6 +8,6 @@
   "scripts": {
     "cypress:info": "npx cypress --version",
     "cypress:run-all-test": "npx cypress run --spec 'cypress/e2e/*.cy.js' --headless --browser chrome",
-    "install-required-plugins": "npm i -y --save-dev cypress-mochawesome-reporter"
+    "cypress:install-required-plugins": "npm i --save-dev cypress-mochawesome-reporter"
   }
 }
