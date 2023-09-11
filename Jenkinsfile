@@ -9,7 +9,7 @@ pipeline {
         stage('Install required Cypress plugin') {
             steps {
                 sh ''' 
-                npm i --save-dev cypress-mochawesome-reporter
+                npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
                 '''                
             }
         }
@@ -34,8 +34,7 @@ pipeline {
                 reportDir: 'mochawesome-report', 
                 reportFiles: 'mochawesome.html', 
                 reportName: 'HTML Report', 
-                reportTitles: '',
-                overwrite: true,
+                reportTitles: ''
                 ])   
             }
         } 
