@@ -9,7 +9,7 @@ pipeline {
         stage('Install required Cypress plugin') {
             steps {
                 sh ''' 
-                npm install --save-dev mochawesome mochawesome-merge mochawesome-report-generator
+                npm i --save-dev cypress-mochawesome-reporter
                 '''                
             }
         }
