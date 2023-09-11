@@ -28,22 +28,18 @@ pipeline {
         }
         stage('Run Cypress HTML report') {
             steps {
-                sh '''
-                npx cypress run --spec 'cypress/e2e/*.cy.js' --headless --browser chrome     
-                '''
-            }
-        }
-        post {
-            always { 
-                sh 'npx mochawesome-merge "Cypress/cypress/results/*.json" > Cypress/mochawesome.json' 
-                sh 'npx mochawesome-report-generator Cypress/mochawesome.json' 
-                publishHTML([allowMissing: false, 
-                alwaysLinkToLastBuild: false, 
+                publishHTML([allowMissing: true, 
+                alwaysLinkToLastBuild: true, 
                 keepAll: false, 
                 reportDir: 'mochawesome-report', 
                 reportFiles: 'mochawesome.html', 
                 reportName: 'HTML Report', 
-                reportTitles: ''])                        
-        }       
+                reportTitles: '',
+                reportFilename: "[status]_[datetime]-[name]-report",
+                timestamp: "longDate",
+                overwrite: true,
+                ])   
+            }
+        } 
     }
 }
