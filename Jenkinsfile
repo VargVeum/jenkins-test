@@ -35,8 +35,6 @@ pipeline {
                 reportFiles: 'mochawesome.html', 
                 reportName: 'HTML Report', 
                 reportTitles: '',
-                reportFilename: "[status]_[datetime]-[name]-report",
-                timestamp: "longDate",
                 overwrite: true,
                 ])   
             }
