@@ -1,5 +1,12 @@
 pipeline {
     agent any
+    properties([parameters([
+    string(name: 'somestring', defaultValue: 'somevalue'),
+    [$class: 'DateParameterDefinition',
+    name: 'somedate',
+    dateFormat: 'yyyy/MM/dd',
+    defaultValue: 'LocalDate.now()']
+])])
     stages {        
         stage('Clone autotests repo') {
             steps {
@@ -33,7 +40,7 @@ pipeline {
                 keepAll: false, 
                 reportDir: 'mochawesome-report', 
                 reportFiles: 'mochawesome.html', 
-                reportName: 'HTML Report ' + Date.now(), 
+                reportName: 'HTML Report', 
                 reportTitles: 'QA report'
                 ])   
             }
