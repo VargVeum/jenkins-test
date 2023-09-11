@@ -33,8 +33,8 @@ pipeline {
                 keepAll: false, 
                 reportDir: 'mochawesome-report', 
                 reportFiles: 'mochawesome.html', 
-                reportName: 'HTML Report', 
-                reportTitles: ''
+                reportName: 'HTML Report ' + Date.now(), 
+                reportTitles: 'QA report'
                 ])   
             }
         } 
