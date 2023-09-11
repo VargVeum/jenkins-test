@@ -1,12 +1,5 @@
 pipeline {
     agent any
-    options([parameters([
-    string(name: 'somestring', defaultValue: 'somevalue'),
-    [$class: 'DateParameterDefinition',
-    name: 'somedate',
-    dateFormat: 'yyyy/MM/dd',
-    defaultValue: 'LocalDate.now()']
-])])
     stages {        
         stage('Clone autotests repo') {
             steps {
