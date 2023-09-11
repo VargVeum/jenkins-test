@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    properties([parameters([
+    options([parameters([
     string(name: 'somestring', defaultValue: 'somevalue'),
     [$class: 'DateParameterDefinition',
     name: 'somedate',
