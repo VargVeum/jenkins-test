@@ -22,21 +22,23 @@ pipeline {
         stage('Run Cypress tests') {
             steps {
                 sh '''
-                npx cypress run --spec 'cypress/e2e/*.cy.js' --headless --browser chrome     
+                NO_COLOR=1 npx cypress run --spec 'cypress/e2e/*.cy.js' --headless --browser chrome   
                 '''
             }
         }
-        stage('Run Cypress HTML report') {
-            steps {
-                publishHTML([allowMissing: true, 
-                alwaysLinkToLastBuild: true, 
-                keepAll: false, 
-                reportDir: 'mochawesome-report', 
-                reportFiles: 'mochawesome.html', 
-                reportName: 'HTML Report', 
-                reportTitles: 'QA report'
-                ])   
-            }
-        } 
+    }
+    post {
+    always {
+      script {
+        publishHTML (target : [allowMissing: false,
+          alwaysLinkToLastBuild: true,
+          keepAll: true,
+          reportDir: 'mochawesome-report', 
+            reportFiles: 'index.html', 
+            reportName: 'Mochawesome Report', 
+            reportTitles: 'QA report'
+          ])
+        }
+      }   
     }
 }
