@@ -5,3 +5,7 @@ reports
 results
 mochawesome-report
 support/videos
+cypress/screenshots
+cypress/videos
+screenshots
+videos

@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 1,
+    "tests": 4,
+    "passes": 3,
     "pending": 0,
-    "failures": 0,
-    "start": "2023-08-25T05:04:14.247Z",
-    "end": "2023-08-25T05:04:17.515Z",
-    "duration": 3268,
-    "testsRegistered": 1,
-    "passPercent": 100,
+    "failures": 1,
+    "start": "2023-09-12T06:47:19.181Z",
+    "end": "2023-09-12T06:47:27.334Z",
+    "duration": 8153,
+    "testsRegistered": 4,
+    "passPercent": 75,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "016ee213-078d-49a9-9fdd-80c77504ae7a",
+      "uuid": "43713f05-43e9-4fb1-a461-57ac689a9f21",
       "title": "",
       "fullFile": "cypress\\e2e\\spec.cy.js",
       "file": "cypress\\e2e\\spec.cy.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "78d7a3dc-8fed-43a3-9ae4-ad24cd48dd13",
+          "uuid": "3231d109-da84-46b2-bf3c-2ce00e54c198",
           "title": "template spec",
           "fullFile": "",
           "file": "",
@@ -35,32 +35,94 @@
           "afterHooks": [],
           "tests": [
             {
-              "title": "passes",
-              "fullTitle": "template spec passes",
+              "title": "1",
+              "fullTitle": "template spec 1",
               "timedOut": null,
-              "duration": 1037,
+              "duration": 542,
               "state": "passed",
               "speed": "fast",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\spec.cy.js\"\n}",
-              "code": "cy.visit('https://example.cypress.io');",
+              "code": "cy.visit('https://example.cypress.io');\ncy.url().should('contain', 'https://example.cypress.io');",
               "err": {},
-              "uuid": "9768913f-e455-4e29-b931-e6d96eaeef4d",
-              "parentUUID": "78d7a3dc-8fed-43a3-9ae4-ad24cd48dd13",
+              "uuid": "a6d3bfa2-5496-4ce6-9cd1-e9beb3e3df7d",
+              "parentUUID": "3231d109-da84-46b2-bf3c-2ce00e54c198",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2",
+              "fullTitle": "template spec 2",
+              "timedOut": null,
+              "duration": 206,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\spec.cy.js\"\n}",
+              "code": "cy.visit('https://example.cypress.io');\ncy.url().should('contain', 'https://example.cypress.io');",
+              "err": {},
+              "uuid": "dd3de0d1-443b-44a2-adef-d488fcee867a",
+              "parentUUID": "3231d109-da84-46b2-bf3c-2ce00e54c198",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3",
+              "fullTitle": "template spec 3",
+              "timedOut": null,
+              "duration": 161,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "{\n  \"title\": \"cypress-mochawesome-reporter-videos-passed\",\n  \"value\": \"cypress\\\\e2e\\\\spec.cy.js\"\n}",
+              "code": "cy.visit('https://example.cypress.io');\ncy.url().should('contain', 'https://example.cypress.io');",
+              "err": {},
+              "uuid": "41042c6c-f3c1-4005-8ed7-69fc565900d0",
+              "parentUUID": "3231d109-da84-46b2-bf3c-2ce00e54c198",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4",
+              "fullTitle": "template spec 4",
+              "timedOut": null,
+              "duration": 4411,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": "[\n  {\n    \"title\": \"cypress-mochawesome-reporter-videos-failed\",\n    \"value\": \"cypress\\\\e2e\\\\spec.cy.js\"\n  },\n  {\n    \"title\": \"cypress-mochawesome-reporter-screenshots\",\n    \"value\": [\n      [\n        \"\\\\spec.cy.js\\\\template spec -- 4 (failed).png\"\n      ]\n    ]\n  }\n]",
+              "code": "cy.visit('https://example.cypress.io');\ncy.url().should('contain', 'https://examplessss.cypress.io');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: expected 'https://example.cypress.io/' to include 'https://examplessss.cypress.io'",
+                "estack": "AssertionError: Timed out retrying after 4000ms: expected 'https://example.cypress.io/' to include 'https://examplessss.cypress.io'\n    at Context.eval (webpack:///./cypress/e2e/spec.cy.js:16:13)",
+                "diff": null
+              },
+              "uuid": "f223a745-6c85-4f1c-ae8b-61e591d07d6c",
+              "parentUUID": "3231d109-da84-46b2-bf3c-2ce00e54c198",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9768913f-e455-4e29-b931-e6d96eaeef4d"
+            "a6d3bfa2-5496-4ce6-9cd1-e9beb3e3df7d",
+            "dd3de0d1-443b-44a2-adef-d488fcee867a",
+            "41042c6c-f3c1-4005-8ed7-69fc565900d0"
           ],
-          "failures": [],
+          "failures": [
+            "f223a745-6c85-4f1c-ae8b-61e591d07d6c"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 1037,
+          "duration": 5320,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
@@ -94,12 +156,17 @@
     },
     "marge": {
       "options": {
+        "reportDir": "mochawesome-report",
         "charts": true,
-        "reportPageTitle": "QA Report 1692939843622",
+        "reportPageTitle": "QA Report 1694501228493",
         "embeddedScreenshots": true,
         "inlineAssets": true,
         "saveAllAttempts": false,
-        "video": false
+        "video": false,
+        "showSkipped": true,
+        "quite": true,
+        "overwrite": true,
+        "toConsole": true
       },
       "version": "6.2.0"
     }

@@ -31,9 +31,10 @@ pipeline {
     always {
       script {
         publishHTML (target : [allowMissing: false,
-          alwaysLinkToLastBuild: true,
-          keepAll: true,
-          reportDir: 'mochawesome-report', 
+            alwaysLinkToLastBuild: true,
+            keepAll: true,
+            useWrapperFileDirectly: true
+            reportDir: 'mochawesome-report', 
             reportFiles: 'index.html', 
             reportName: 'Mochawesome Report', 
             reportTitles: 'QA report'
