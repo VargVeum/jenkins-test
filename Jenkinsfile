@@ -37,7 +37,7 @@ pipeline {
             reportDir: 'mochawesome-report', 
             reportFiles: 'index.html', 
             reportName: 'Mochawesome Report', 
-            reportTitles: 'QA report'
+            reportTitles: 'QA test report'
           ])
         }
       }   

@@ -18,6 +18,7 @@ module.exports = defineConfig({
     overwrite: true,
     toConsole: true,
   },
+  experimentalWebKitSupport: true,
   e2e: {
       setupNodeEvents(on, config) {
         require('cypress-mochawesome-reporter/plugin')(on);
